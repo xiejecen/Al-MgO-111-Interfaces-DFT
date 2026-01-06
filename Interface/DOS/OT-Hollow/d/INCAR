@@ -1,0 +1,34 @@
+# Basic setup:
+ISTART = 1
+ICHARG = 11
+ISPIN = 1
+NCORE= 4
+LREAL= Auto
+# Accuracy controls:
+PREC = Accurate
+ENCUT= 520  
+# Electronic loop controls:
+ALGO = 48
+EDIFF = 1E-05
+NELM = 100
+ISMEAR = -5
+SIGMA = 0.05
+
+# Structure control:
+ISIF = 2
+IBRION = -1
+NSW = 0
+
+# Output control:
+LCHARG = .TRUE.
+LWAVE = .FALSE.
+LELF = .FALSE.
+LVTHAR = .TRUE.
+
+#DensityOfStates control:
+EMIN = -20     #此为DOS图的能量范围，根据能带的能量范围来决定min和max是多少。
+EMAX = 20
+NEDOS  = 3000   #这个应该是DOS的采点个数，弄高一点无所谓。
+LORBIT = 11
+AMIN=0.01
+SYMPREC =1E-4

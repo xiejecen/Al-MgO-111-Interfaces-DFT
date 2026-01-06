@@ -1,0 +1,56 @@
+
+#======================================================================
+# CRYSTAL DATA
+#----------------------------------------------------------------------
+data_VESTA_phase_1
+
+_chemical_name_common                  'Layer(26)                             '
+_cell_length_a                         3.009478
+_cell_length_b                         3.009477
+_cell_length_c                         69.122406
+_cell_angle_alpha                      89.180611
+_cell_angle_beta                       90.819389
+_cell_angle_gamma                      120.777176
+_cell_volume                           537.796813
+_space_group_name_H-M_alt              'P 1'
+_space_group_IT_number                 1
+
+loop_
+_space_group_symop_operation_xyz
+   'x, y, z'
+
+loop_
+   _atom_site_label
+   _atom_site_occupancy
+   _atom_site_fract_x
+   _atom_site_fract_y
+   _atom_site_fract_z
+   _atom_site_adp_type
+   _atom_site_U_iso_or_equiv
+   _atom_site_type_symbol
+   O1         1.0     0.478480     0.521520     0.447560    Uiso  ? O
+   O2         1.0     0.514613     0.485387     0.554361    Uiso  ? O
+   O3         1.0     0.527269     0.472731     0.661287    Uiso  ? O
+   O4         1.0     0.541520     0.458480     0.765820    Uiso  ? O
+   O5         1.0     0.836518     0.163482     0.483091    Uiso  ? O
+   O6         1.0     0.176038     0.823962     0.518732    Uiso  ? O
+   O7         1.0     0.852488     0.147512     0.590009    Uiso  ? O
+   O8         1.0     0.189990     0.810010     0.625645    Uiso  ? O
+   O9         1.0     0.864648     0.135352     0.696888    Uiso  ? O
+   O10        1.0     0.202525     0.797475     0.732187    Uiso  ? O
+   Mg1        1.0     0.505403     0.494597     0.502046    Uiso  ? Mg
+   Mg2        1.0     0.519793     0.480207     0.608945    Uiso  ? Mg
+   Mg3        1.0     0.531778     0.468222     0.715916    Uiso  ? Mg
+   Mg4        1.0     0.166955     0.833045     0.466423    Uiso  ? Mg
+   Mg5        1.0     0.844166     0.155834     0.537668    Uiso  ? Mg
+   Mg6        1.0     0.182175     0.817825     0.573304    Uiso  ? Mg
+   Mg7        1.0     0.857086     0.142914     0.644586    Uiso  ? Mg
+   Mg8        1.0     0.194379     0.805621     0.680236    Uiso  ? Mg
+   Mg9        1.0     0.868910     0.131090     0.752223    Uiso  ? Mg
+   Al1        1.0     0.926362     0.073638     0.235250    Uiso  ? Al
+   Al2        1.0     0.947149     0.052851     0.331777    Uiso  ? Al
+   Al3        1.0     0.961090     0.038910     0.427568    Uiso  ? Al
+   Al4        1.0     0.606105     0.393895     0.299750    Uiso  ? Al
+   Al5        1.0     0.644573     0.355427     0.396386    Uiso  ? Al
+   Al6        1.0     0.267806     0.732194     0.267796    Uiso  ? Al
+   Al7        1.0     0.292181     0.707819     0.364075    Uiso  ? Al

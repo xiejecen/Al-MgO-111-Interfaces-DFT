@@ -1,0 +1,58 @@
+
+#======================================================================
+# CRYSTAL DATA
+#----------------------------------------------------------------------
+data_VESTA_phase_1
+
+_chemical_name_common                  'Layer (20)                            '
+_cell_length_a                         2.985060
+_cell_length_b                         2.985054
+_cell_length_c                         82.207405
+_cell_angle_alpha                      90.000000
+_cell_angle_beta                       90.000000
+_cell_angle_gamma                      119.999931
+_cell_volume                           634.376662
+_space_group_name_H-M_alt              'P 1'
+_space_group_IT_number                 1
+
+loop_
+_space_group_symop_operation_xyz
+   'x, y, z'
+
+loop_
+   _atom_site_label
+   _atom_site_occupancy
+   _atom_site_fract_x
+   _atom_site_fract_y
+   _atom_site_fract_z
+   _atom_site_adp_type
+   _atom_site_U_iso_or_equiv
+   _atom_site_type_symbol
+   O1         1.0     0.000000     0.000000     0.440232    Uiso  ? O
+   O2         1.0     0.333333     0.666667     0.470025    Uiso  ? O
+   O3         1.0     0.000000     0.000000     0.529697    Uiso  ? O
+   O4         1.0     0.333333     0.666667     0.559569    Uiso  ? O
+   O5         1.0     0.000000     0.000000     0.619358    Uiso  ? O
+   O6         1.0     0.333333     0.666667     0.649249    Uiso  ? O
+   O7         1.0     -0.000000     -0.000000     0.709018    Uiso  ? O
+   O8         1.0     0.666667     0.333333     0.499852    Uiso  ? O
+   O9         1.0     0.666667     0.333333     0.589466    Uiso  ? O
+   O10        1.0     0.666667     0.333333     0.679150    Uiso  ? O
+   Mg1        1.0     0.000000     0.000000     0.484998    Uiso  ? Mg
+   Mg2        1.0     0.000000     0.000000     0.574580    Uiso  ? Mg
+   Mg3        1.0     -0.000000     -0.000000     0.664257    Uiso  ? Mg
+   Mg4        1.0     0.666667     0.333333     0.455164    Uiso  ? Mg
+   Mg5        1.0     0.666667     0.333333     0.544689    Uiso  ? Mg
+   Mg6        1.0     0.666667     0.333333     0.634371    Uiso  ? Mg
+   Mg7        1.0     0.666667     0.333333     0.724671    Uiso  ? Mg
+   Mg8        1.0     0.333333     0.666667     0.424822    Uiso  ? Mg
+   Mg9        1.0     0.333333     0.666667     0.514840    Uiso  ? Mg
+   Mg10       1.0     0.333333     0.666667     0.604472    Uiso  ? Mg
+   Mg11       1.0     0.333333     0.666667     0.694168    Uiso  ? Mg
+   Al1        1.0     -0.000000     -0.000000     0.233546    Uiso  ? Al
+   Al2        1.0     -0.000000     -0.000000     0.314705    Uiso  ? Al
+   Al3        1.0     0.000000     0.000000     0.395610    Uiso  ? Al
+   Al4        1.0     0.666667     0.333333     0.287861    Uiso  ? Al
+   Al5        1.0     0.666667     0.333333     0.368778    Uiso  ? Al
+   Al6        1.0     0.333333     0.666667     0.260913    Uiso  ? Al
+   Al7        1.0     0.333333     0.666667     0.341750    Uiso  ? Al

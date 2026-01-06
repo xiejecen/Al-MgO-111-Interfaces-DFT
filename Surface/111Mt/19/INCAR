@@ -1,0 +1,52 @@
+system=Al110
+ 
+LREAL = Auto
+ALGO = F
+! IALGO = 48
+NCORE=4
+NELMDL= 8 
+
+ ENCUT = 450 eV
+ PREC = H   
+    
+ ISMEAR = 0
+ SIGMA = 0.05
+ 
+ LWAVE = F
+ LCHARG = F
+ 
+! LORBIT = 12
+
+!  ISPIN = 2
+
+ NELM = 100             
+
+ ISIF = 2
+ NELMIN = 8
+ EDIFF = 1E-5
+ EDIFFG = -0.01
+ NSW = 500
+ IBRION = 2
+  
+! VOSKOWN = 1 
+!  LDAU=.TURE.          
+!  LDAUTYPE=2           
+!  LDAUL=-1 2 2 2 -1 -1       
+!  LDAUU= 0 4.91 6.70 4.20 0 0      
+!  LDAUJ =0 0 0 0 0 0       
+!  MAGMOM=4*0 -4 4 4 -4 4*0 16*0
+
+ 
+! AMIX = 0.2
+! BMIX = 0.0001
+! AMIX_MAG = 0.8
+! BMIX_MAG = 0.0001
+ 
+                  
+                  
+                  
+                  
+                  
+
+
+                  

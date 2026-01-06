@@ -1,0 +1,79 @@
+脚本开始时间: 2024-07-29 10:13:25
+# Data from 1.01
+ reached required accuracy - stopping structural energy minimisation
+  energy  without entropy=     -141.77342230  energy(sigma->0) =     -141.77600547
+  volume of cell :      303.97
+
+# Data from 1.02
+ reached required accuracy - stopping structural energy minimisation
+  energy  without entropy=     -141.70318342  energy(sigma->0) =     -141.70787043
+  volume of cell :      306.98
+
+# Data from 1.03
+ reached required accuracy - stopping structural energy minimisation
+  energy  without entropy=     -141.62713623  energy(sigma->0) =     -141.62942175
+  volume of cell :      309.99
+
+# Data from 1.04
+ reached required accuracy - stopping structural energy minimisation
+  energy  without entropy=     -141.51512708  energy(sigma->0) =     -141.51715106
+  volume of cell :      313.00
+
+# Data from 1.05
+ reached required accuracy - stopping structural energy minimisation
+  energy  without entropy=     -141.37559242  energy(sigma->0) =     -141.37690302
+  volume of cell :      316.01
+
+# Data from 1.06
+ reached required accuracy - stopping structural energy minimisation
+  energy  without entropy=     -141.20374307  energy(sigma->0) =     -141.20579490
+  volume of cell :      319.02
+
+# Data from 1.07
+ reached required accuracy - stopping structural energy minimisation
+  energy  without entropy=     -141.02211603  energy(sigma->0) =     -141.02457654
+  volume of cell :      322.03
+
+# Data from 1.08
+ reached required accuracy - stopping structural energy minimisation
+  energy  without entropy=     -140.83290833  energy(sigma->0) =     -140.83480765
+  volume of cell :      325.04
+
+# Data from 1.09
+ reached required accuracy - stopping structural energy minimisation
+  energy  without entropy=     -140.64371569  energy(sigma->0) =     -140.64554481
+  volume of cell :      328.05
+
+# Data from 1.10
+ reached required accuracy - stopping structural energy minimisation
+  energy  without entropy=     -140.45612938  energy(sigma->0) =     -140.45798545
+  volume of cell :      331.06
+
+# Data from 1.11
+ reached required accuracy - stopping structural energy minimisation
+  energy  without entropy=     -140.27046110  energy(sigma->0) =     -140.27275121
+  volume of cell :      334.07
+
+# Data from 1.12
+ reached required accuracy - stopping structural energy minimisation
+  energy  without entropy=     -140.25492570  energy(sigma->0) =     -140.25820949
+  volume of cell :      337.08
+
+# Data from 1.13
+ reached required accuracy - stopping structural energy minimisation
+  energy  without entropy=     -140.22137172  energy(sigma->0) =     -140.22304709
+  volume of cell :      340.09
+
+# Data from 1.14
+ reached required accuracy - stopping structural energy minimisation
+  energy  without entropy=     -140.19560067  energy(sigma->0) =     -140.19702802
+  volume of cell :      343.09
+
+# Data from 1.15
+ reached required accuracy - stopping structural energy minimisation
+  energy  without entropy=     -140.17827636  energy(sigma->0) =     -140.17960702
+  volume of cell :      346.10
+
+脚本结束时间: 2024-07-31 10:56:19
+
+总用时: 0 小时 0 分钟

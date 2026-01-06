@@ -1,0 +1,112 @@
+#! /bin/bash
+#PBS  -N  atk
+#PBS  -l  nodes=node01:ppn=2
+#PBS  -l  walltime=10000:00:00
+#PBS  -j  oe
+#PBS  -q  hongchang
+#输入拉伸文件
+# 获取当前目录的绝对路径
+current_path="/home/hongchang/xiejiachen/tensile2/MGO"
+# 查找文件
+start_time=$(date "+%Y-%m-%d %H:%M:%S")
+echo "$current_path"#
+cd "$current_path"
+# 检查必要的文件是否存在
+if [ ! -f POTCAR ] || [ ! -f KPOINTS ] || [ ! -f INCAR ] || [ ! -f CONTCAR ]; then
+    echo "缺少必要文件 POTCAR, KPOINTS, INCAR 或 CONTCAR。"
+    exit 1
+fi
+
+# 获取初始晶格参数 c
+initial_lattice_c=$(awk 'NR==5 {print $3}' CONTCAR)
+
+# 定义起始和结束的系数
+start=1
+end=15
+
+echo "开始处理目录..."
+touch tensile_energy
+echo "# Tensile energy data" > tensile_energy
+echo "脚本开始时间: $start_time" > tensile_energy
+# 循环处理每个系数
+for ((i=start; i<=end; i+=1)); do
+    multiplier=$(echo "scale=2; $i / 100" | bc)
+    
+    # 计算新的目录名
+    directory="1.$(printf "%02d" $i)"
+    
+    # 创建目录
+    mkdir -p "$directory"
+    echo "目录 $directory 已创建。"
+    
+    # 进入目录
+    cd "$directory"
+    echo "已进入目录 $directory。"
+    
+    # 复制POTCAR、KPOINTS、INCAR文件和提交脚本
+    cp "../POTCAR" "../KPOINTS" "../INCAR" "../vasp.pbs" .
+    echo "文件已复制到目录 $directory。"
+    sed -i "s/ISIF = [^ ]*/ISIF = 2 /" INCAR
+    # 复制前一个目录的CONTCAR文件
+    if [ "$i" -gt 2 ]; then
+        prev_directory="1.$(printf "%02d" $((i - 1)))"
+        cp "$current_path/$prev_directory/CONTCAR" .
+        echo "从 $prev_directory 复制 CONTCAR 到 $directory。"
+    else
+        cp "../CONTCAR" .
+        echo "复制初始 CONTCAR 到 $directory。"
+    fi
+    cd "$directory"
+    # 计算新的晶格参数 c，并保留6位小数
+    new_lattice_c=$(echo "scale=6; $initial_lattice_c + $initial_lattice_c * $multiplier" | bc -l)
+    
+    # 修改CONTCAR文件
+    awk -v new_lattice_c="$new_lattice_c" 'BEGIN{FS=OFS=" "} 
+                                    NR==5{$3=new_lattice_c} 
+                                    1' CONTCAR > POSCAR
+  
+    echo "修改 CONTCAR 文件中的晶格参数 c 并保存。"
+    
+    # 提交任务（这里假设你使用了slurm工作负载管理器）
+    qsub vasp.pbs
+    job_id=${job_id##* }
+    echo "任务已提交到队列。"
+    
+    # 监控vasp输出文件生成
+    echo "开始监控 $directory 中的 vasp 输出文件生成..."
+    while true; do
+        # 检查是否有vasp加后缀为数字的文件
+        if ls atk.o*$job_id| grep "reached required accuracy - stopping structural energy minimisation" OUTCAR; then 
+            echo "# Data from $directory" >> "$current_path/tensile_energy"
+            grep "reached required accuracy - stopping structural energy minimisation" OUTCAR  >> "$current_path/tensile_energy"
+            echo "在 $directory 发现 vasp 输出文件。"
+            echo "监控到的文件列表："
+            ls atk.o*
+          
+            # 搜索 energy(sigma->0) 并追加到 tensile_energy 文件
+            grep "energy(sigma->0)" OUTCAR | tail -n 1 >> "$current_path/tensile_energy"
+            grep "volume of cell" OUTCAR | tail -n 1 >> "$current_path/tensile_energy"
+            echo "" >> "$current_path/tensile_energy"
+            break
+        else
+            echo "在 $directory 未发现 vasp 输出文件，等待..."
+        fi
+        # 等待一段时间后再次检查
+        sleep 15
+    done
+    
+    # 返回父目录
+    cd ..
+    echo "返回到父目录。"
+done
+end_time=$(date "+%Y-%m-%d %H:%M:%S")
+echo "脚本结束时间: $end_time" >> "$current_path/tensile_energy"
+start_timestamp=$(date -d "$start_time" +%s)
+end_timestamp=$(date -d "$end_time" +%s)
+total_seconds=$(end_timestamp - start_timestamp)
+total_minutes=$((total_seconds / 60))
+total_hours=$((total_minutes / 60))
+total_minutes=$((total_minutes % 60))
+echo "$total_seconds" >> "$current_path/tensile_energy"
+echo "总用时: $total_hours 小时 $total_minutes 分钟" >> "$current_path/tensile_energy"
+
