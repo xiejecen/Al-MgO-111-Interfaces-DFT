@@ -4,7 +4,7 @@ DFT input files and data for interfacial energy, charge transfer, and fracture b
 
 This repository provides density functional theory (DFT) input files and data supporting the study of Al/MgO(111) interfaces with different surface terminations. The data are associated with the manuscript:
 
-**"[First-Principles Study of the Polar MgO(111)/Al(111) Interface: Adhesion, Stability, and Electronic Structure]"**  
+**"First-Principles Study of the Polar MgO(111)/Al(111) Interface: Adhesion, Stability, and Electronic Structure"**  
 submitted to *Computational Materials Science*.
 
 The calculations focus on the thermodynamic stability, electronic structure, charge transfer behavior, and interfacial fracture mechanisms of Al/MgO(111) interfaces.
@@ -93,5 +93,5 @@ If you use the data or structures from this repository, please cite the correspo
 
 For questions regarding the data or calculations, please contact:
 
-**[JiachenXie]**   
-**Email:** [xie-jia-chen@outlook.com]
+**JiachenXie**   
+**Email:** xie-jia-chen@outlook.com
