@@ -1,6 +1,6 @@
 # Al(111)-MgO(111)-Interfaces-DFT
 DFT input files and data for interfacial energy, charge transfer, and fracture behavior of Al/MgO(111) interfaces
-# Al/MgO(111) Interfaces: First-Principles Calculations
+# Al(111)/MgO(111) Interfaces: First-Principles Calculations
 
 This repository provides density functional theory (DFT) input files and data supporting the study of Al/MgO(111) interfaces with different surface terminations. The data are associated with the manuscript:
 
